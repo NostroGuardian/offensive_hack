@@ -6,6 +6,5 @@ To-Do List:
 - [X] back btn doesn't work
 - [X] sucsessfully registration alert
 - [X] registration with spaces in login and password input
-- [ ] registration with <script>alert(1)<script/> in login and password input
 - [ ] XSS prevention
 - [ ] SQLI prevention
