@@ -1,0 +1,33 @@
+@import 'main.css';
+
+body {
+	color: wheat;
+	position: relative;
+}
+
+.fields {
+	margin-left: 350px;
+}
+
+.form_logo {
+	margin-left: 250px;
+}
+
+.back_btn {
+	width: 80%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #b3b3b3;
+	border-radius: 50px;
+	text-transform: uppercase;
+	color: #b3b3b3;
+	margin-top: 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
