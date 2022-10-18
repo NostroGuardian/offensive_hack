@@ -50,9 +50,12 @@
             $user_login = trim($_POST['login']);
             $user_password = trim($_POST['password']);
 
+            $user_login_filtered = htmlspecialchars($user_login, ENT_QUOTES);
+            $user_password_filtered = htmlspecialchars($user_password, ENT_QUOTES);
+
             $query = 'SELECT * FROM `users` WHERE login = :user_login';
             $stmt = $connection->prepare($query);
-            $params = [':user_login'=>$user_login];
+            $params = [':user_login'=>$user_login_filtered];
             $stmt->execute($params);
 
             if ($stmt->rowCount() > 0) {

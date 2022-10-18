@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="user">
-        Welcome,<br><span><?= $user?></span>!<br>
+        Welcome,<br><span><?= htmlspecialchars($user, ENT_QUOTES);?></span>!<br>
         <a href="logout.php">logout</a>
     </div>
 </header>

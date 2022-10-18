@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="user">
-        Welcome,<br><span><?= $user?></span>!<br>
+        Welcome,<br><span><?= htmlspecialchars($user, ENT_QUOTES);?></span>!<br>
         <a href="logout.php">logout</a>
     </div>
 </header>
@@ -37,7 +37,7 @@
 <section class="vulnerabilities">
     <h1>Vulnerabilities</h1>
     <div class="vulnerabilities_row">
-        <a href="easy/1.html"><div class="vulnerabilities_item">№1</div></a>
+        <a href="easy_1.php"><div class="vulnerabilities_item">Chat</div></a>
         <a href="easy/2.html"><div class="vulnerabilities_item">№2</div></a>
         <a href="easy/3.html"><div class="vulnerabilities_item">№3</div></a>
         <a href="easy/4.html"><div class="vulnerabilities_item">№4</div></a>
