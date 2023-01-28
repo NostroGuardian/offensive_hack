@@ -37,8 +37,8 @@
 <section class="vulnerabilities">
     <h1>Vulnerabilities</h1>
     <div class="vulnerabilities_row">
-        <a href="easy_1.php"><div class="vulnerabilities_item">Chat</div></a>
-        <a href="easy/2.html"><div class="vulnerabilities_item">№2</div></a>
+        <a href="easy_1.php"><div class="vulnerabilities_item">№1</div></a>
+        <a href="easy_2.php"><div class="vulnerabilities_item">№2</div></a>
         <a href="easy/3.html"><div class="vulnerabilities_item">№3</div></a>
         <a href="easy/4.html"><div class="vulnerabilities_item">№4</div></a>
         <a href="easy/5.html"><div class="vulnerabilities_item">№5</div></a>

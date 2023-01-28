@@ -5,9 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="easy_1.css">
-    <script src="easy_1.js" defer></script>
-    <title>Offensive Hack - XSS - 1 - Easy</title>
+    <link rel="stylesheet" href="easy_2.css">
+    <script src="easy_2.js" defer></script>
+    <title>Offensive Hack - XSS - 2 - Easy</title>
 </head>
 <body>
     <?php
@@ -21,7 +21,7 @@
     ?>
 <header>
     <a href="dashboard.php"><div class="logo"><img src="img/logo_img.png" alt="logo">XSS</div></a>
-    <h1>XSS - 1 - Easy</h1>
+    <h1>XSS - 2 - Easy</h1>
     <div class="user">
         Account:<br><span><?= htmlspecialchars($user, ENT_QUOTES);?></span><br>
         <a href="logout.php">logout</a>
@@ -38,7 +38,8 @@
 
             $all_messages = $connection->query('SELECT * FROM `messages`')->fetchAll(PDO::FETCH_ASSOC);
             foreach ($all_messages as $m => $v){
-                echo '<p class="chat_message"><span class="chat_nickname">'.$v['username'].': </span>'.$v['message'].'</p>';
+                //echo '<p class="chat_message" input="'.$v['message'].'"><span class="chat_nickname">'.$v['username'].': </span>'.$v['message'].'</p>';
+                echo '<p class="chat_message" input="'.$v['message'].'"><span class="chat_nickname">'.$v['username'].': </span>'.htmlspecialchars($v['message'], ENT_QUOTES).'</p>';
             }
             ?>
         </div>
