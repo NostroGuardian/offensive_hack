@@ -37,7 +37,7 @@
 <section class="vulnerabilities">
     <h1>Vulnerabilities</h1>
     <div class="vulnerabilities_row">
-        <a href="medium/1.html"><div class="vulnerabilities_item">№1</div></a>
+        <a href="medium_1.php"><div class="vulnerabilities_item">№1</div></a>
         <a href="medium/2.html"><div class="vulnerabilities_item">№2</div></a>
         <a href="medium/3.html"><div class="vulnerabilities_item">№3</div></a>
         <a href="medium/4.html"><div class="vulnerabilities_item">№4</div></a>

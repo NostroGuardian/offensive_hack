@@ -52,7 +52,7 @@
             </form>
         </div>
     </div>
-    <div class="clear_chat"><a href="clearchat.php">Clear chat</a></div>
+    <div class="clear_chat"><a href="easy_2_clearchat.php">Clear chat</a></div>
 </section>
     <?php
     require_once('db.php');
