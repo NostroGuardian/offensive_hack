@@ -80,3 +80,7 @@ To-Do List:
       ?
       ```
     </details>
+   
+   
+## ТЗ по Таск #3:
+Это Reflected XSS и что-то там ещё
