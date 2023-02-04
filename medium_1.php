@@ -47,7 +47,7 @@ if(!isset($_SESSION['user_id'])){
     <div class="chat_input">
         <div class="chat_input_inner">
             <form action="" method="post">
-                <input class="chat_input_window" type="text" name="chat_message" placeholder="Enter your message..." required>
+                <input class="chat_input_window" type="text" name="chat_message" placeholder="Enter your message..." required autofocus>
                 <button class="chat_input_button" type="submit" name="chat_btn">Send</button>
             </form>
         </div>
@@ -62,6 +62,7 @@ $connection = new PDO('mysql:host='.host.';dbname='.database.';charset='.charset
 if (isset($_POST['chat_btn'])) {
     $chat_user = $_SESSION['user_name'];
     $chat_message = ($_POST['chat_message']);
+    header('Location: medium_1.php');
     $whitespaces = "          ";
     if (!(trim($chat_message, $whitespaces))) {
         echo '<p class="chat_message chat_whitespaces_error">You are trying to send an empty string!</p>';
