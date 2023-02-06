@@ -1,8 +1,5 @@
-var blackList = [`<script>`, `</script>`, `<SCRIPT>`, `</SCRIPT>`];
-
-document.querySelector('input').onkeyup = function() {
-    var expr = new RegExp(blackList.join('|'));
-    if (this.value.search(expr) !== -1) {
-        this.value = '';
-    }
+function payloadSecure() {
+    let originalText = document.querySelector('.chat_input_window').value;
+    let newText = originalText.replace(/script/g, '');
+    document.querySelector('.chat_input_window').value = newText;
 }

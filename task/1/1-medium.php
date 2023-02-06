@@ -22,7 +22,7 @@
     ?>
 <header>
     <a href="../../dashboard.php"><div class="logo"><img src="../../img/logo_img.png" alt="logo">XSS</div></a>
-    <h1>XSS - 1 - Easy</h1>
+    <h1>XSS - 1 - Medium</h1>
     <div class="user">
         Account:<br><span><?= htmlspecialchars($user, ENT_QUOTES);?></span><br>
         <a href="../../logout.php">logout</a>
@@ -47,7 +47,7 @@
 <div class="chat_input">
     <div class="chat_input_inner">
         <form action="" method="post">
-            <input class="chat_input_window" type="text" name="chat_message" placeholder="Enter your message..." required autofocus>
+            <input class="chat_input_window" type="text" name="chat_message" placeholder="Enter your message..." onchange="payloadSecure()" required autofocus>
             <button class="chat_input_button" type="submit" name="chat_btn">Send</button>
         </form>
     </div>
@@ -65,7 +65,7 @@
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         $whitespaces = "          ";
         if (!(trim($chat_message, $whitespaces))) {
-            echo '<p> class="chat_message chat_whitespaces_error">You are trying to send an empty string!</p>';
+            echo '<p class="chat_message chat_whitespaces_error">You are trying to send an empty string!</p>';
         } else {
             $query = 'INSERT INTO `task_1_medium` (username, message) VALUES (:chat_user, :chat_message)';
 
