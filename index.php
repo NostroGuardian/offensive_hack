@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="main.css">
-    <script src="formVal.js" defer></script>
+	<link rel="stylesheet" href="css/main.css">
+    <script src="js/formVal.js" defer></script>
 	<title>Offensive Hack - Login</title>
 </head>
 <body>
@@ -37,14 +37,29 @@
 
 		</div>
 	</div>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
     <?php
         require_once('db.php');
 
-        session_start();
+        session_start();       
         session_name();
 
-        $connection = new PDO('mysql:host='.host.';dbname='.database.';charset='.charset.';', user, password);
+        $database_connect = new PDO('mysql:host='.host.';', user, password);
+        $database_create = "CREATE DATABASE IF NOT EXISTS test";
+        $database_connect->exec($database_create);
+
+        #echo $database_connect;
+		$connection = new PDO('mysql:host='.host.';dbname='.database.';charset='.charset.';', user, password);
+
+        $create_query = "
+        CREATE TABLE IF NOT EXISTS `users` (id INT(40) UNSIGNED AUTO_INCREMENT PRIMARY KEY, login VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL);
+        CREATE TABLE IF NOT EXISTS `task_1_easy` (id INT(40) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL, message VARCHAR(255) NOT NULL);
+        CREATE TABLE IF NOT EXISTS `task_1_medium` (id INT(40) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL, message VARCHAR(255) NOT NULL);
+        CREATE TABLE IF NOT EXISTS `task_2_easy` (id INT(40) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL, message VARCHAR(255) NOT NULL);
+        CREATE TABLE IF NOT EXISTS `task_2_medium` (id INT(40) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL, message VARCHAR(255) NOT NULL);
+        CREATE TABLE IF NOT EXISTS `task_2_hard` (id INT(40) UNSIGNED AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL, message VARCHAR(255) NOT NULL)";
+
+        $connection->exec($create_query);
 
         if (isset($_POST['login_btn'])) {
             $user_login = trim($_POST['login']);
@@ -63,7 +78,7 @@
                 if (password_verify($user_password,$getRow['password'])) {
                     $_SESSION['user_id'] = $getRow['id'];
                     $_SESSION['user_name'] = $getRow['login'];
-                    header('location:dashboard.php');
+                    header('location: dashboard.php');
                     exit();
                 } else {
                     echo '<div class="bad_alert">Wrong login or password!</div>';

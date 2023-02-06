@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dashboard.css">
-    <script src="difficulty.js" defer></script>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/difficulty.js" defer></script>
     <title>Offensive Hack - Dashboard</title>
 </head>
 <body>
@@ -37,9 +37,9 @@
 <section class="vulnerabilities">
     <h1>Vulnerabilities</h1>
     <div class="vulnerabilities_row">
-        <a href="medium_1.php"><div class="vulnerabilities_item">№1</div></a>
-        <a href="medium/2.html"><div class="vulnerabilities_item">№2</div></a>
-        <a href="medium/3.html"><div class="vulnerabilities_item">№3</div></a>
+        <a href="task/1/1-medium.php"><div class="vulnerabilities_item">№1</div></a>
+        <a href="task/2/2-medium.php"><div class="vulnerabilities_item">№2</div></a>
+        <a href="task/3/3-medium.php"><div class="vulnerabilities_item">№3</div></a>
         <a href="medium/4.html"><div class="vulnerabilities_item">№4</div></a>
         <a href="medium/5.html"><div class="vulnerabilities_item">№5</div></a>
     </div>
