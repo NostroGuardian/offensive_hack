@@ -30,7 +30,7 @@ To-Do List:
     </details>
      
    
-- [ ] 2. Medium сложность - убирать из ввода юзера опасные теги с учетом регистра (аналог str_ireplace в PHP). 
+- [X] 2. Medium сложность - убирать из ввода юзера опасные теги с учетом регистра (аналог str_ireplace в PHP). 
    
    - <details>
       <summary>Описание работы Medium</summary>
