@@ -6,8 +6,6 @@ To-Do List:
 - [X] back btn doesn't work
 - [X] sucsessfully registration alert
 - [X] registration with spaces in login and password input
-- [ ] XSS prevention
-- [ ] SQLI prevention
 - [ ] Medium. Починить "поломку" страницы Easy-1 при отправке пейлоада <script>
 - [ ] Hiht. На Medium-1 добавить фильтрацию ввода пользователя после нажатия кнопки отпрвавки сообщения. 
 - [ ] Low. Заменить кнопки переключения сложности на DOM, чтобы сложность менялась нажатием без обновления страницы и после при нажатии на номер таска был редирект на выбранный таск с нужным уровнем сложности
