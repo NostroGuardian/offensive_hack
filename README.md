@@ -112,7 +112,7 @@ To-Do List:
       ```
     </details>
 
-- [X] 2. Medium сложность, защит нет
+- [ ] 2. Medium сложность, защит нет
 
    - <details>
       <summary>Описание работы Medium</summary>
@@ -122,7 +122,7 @@ To-Do List:
       ```
     </details>
     
-- [X] 3. Hard сложность, защит нет
+- [ ] 3. Hard сложность, защит нет
 
    - <details>
       <summary>Описание работы Hard</summary>
