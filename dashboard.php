@@ -39,8 +39,8 @@
     <div class="vulnerabilities_row">
         <a href="task/1/1-easy.php"><div class="vulnerabilities_item">№1</div></a>
         <a href="task/2/2-easy.php"><div class="vulnerabilities_item">№2</div></a>
-        <a href="task/2/3-easy.html"><div class="vulnerabilities_item">№3</div></a>
-        <a href="task/4.html"><div class="vulnerabilities_item">№4</div></a>
+        <a href="task/3/3-easy.php"><div class="vulnerabilities_item">№3</div></a>
+        <a href="task/4/4-easy.php"><div class="vulnerabilities_item">№4</div></a>
         <a href="task/5.html"><div class="vulnerabilities_item">№5</div></a>
     </div>
     <div class="vulnerabilities_row">
